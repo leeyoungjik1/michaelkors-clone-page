@@ -1,0 +1,332 @@
+*{
+    background-color: black;
+    color: white;
+}
+body{
+    margin: 0; padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+
+/* 헤더 */
+
+header{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+header>h1{
+    margin: 0;
+    margin-top: 1rem;
+}
+header>p{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.video{
+    flex: 1;
+    width: 90%;
+    position: relative;
+}
+nav{
+    width: 90%;
+    position: sticky;
+    top: .5rem;
+    z-index: 1;
+    opacity: 0.8;
+}
+nav>ul{
+    display: flex;
+    height: 50px;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+}
+nav>ul>li{
+    height: 100%;
+    font-size: 0.8rem;
+    list-style: none;
+    flex: 1;
+    background-color: rgba(211,211,211,.21);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+.resize-nav{
+    all: unset;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    color: black;
+    background-color: white;
+    display: none;
+}
+.page-btn:hover{
+    color: wheat;
+    background-color: #111 ;
+}
+
+/* 메인 */
+
+
+main{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color:  #111;
+}
+main *{
+    background-color:  #111;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+
+
+#fall-winter{
+    width: 70%;
+    padding: 3rem;
+}
+#fall-winter p{
+    line-height: 2rem;
+}
+
+
+
+#lookbook{
+    width: 90%;
+    border-bottom: 1px solid gray;
+    background-color:  #111;
+    /* border: 1px solid red; */
+}
+#lookbook h2{
+    margin-top: 100px;
+}
+
+
+#img-container{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 180vh;
+    gap: .5rem;
+}
+#img-container>.img{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+#modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    /* display: flex; */
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+#modal div{
+    background-color: black;
+}
+#modal-imgs{
+    /* border: 1px solid green; */
+    width: 40%;
+    height: 90%;
+}
+.modal-img{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    /* background-image: url(/240308/imgs/model-1.jpg); */
+    background-position: center;
+    background-size: contain;
+}
+.modal-btn{
+    margin: 0; padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: normal;
+    background-color: black;
+    border: none;
+}
+.modal-btn.close{
+    position: absolute;
+    top: 0; right: 1rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+.modal-btn.left, .modal-btn.right{
+    height: 100%;
+}
+.modal-btn.left:hover, .modal-btn.right:hover{
+    background-color: #222;
+}
+button{
+    font-weight: bold;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem 4rem;
+}
+
+#credits h2{
+    margin-top: 7rem;
+}
+#credits-window{
+    /* border: 1px solid red; */
+    width: 30vw;
+    height: 60vh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.credits-container{
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    overflow: auto;
+    left: 0vw;
+    transition: .5s;
+}
+.credits-box{
+    width: 100%;
+    /* border: 1px solid green; */
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.credit h3{
+    font-size: .8rem;
+    color: gray;
+}
+.credit p{
+    font-size: 1.2rem;
+}
+#credits button{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 1rem 6rem;
+    border: none;
+    /* border: 1px solid red; */
+    margin-bottom: 7rem;
+}
+
+
+#banners{
+    width: 90%;
+    height: 100vh;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-bottom: 5rem;
+    /* border: 1px solid red; */
+}
+.banner *{
+    background-color: black;
+}
+.banner{
+    /* border: 1px solid red; */
+    height: 40vh;
+    background-color: black;
+    display: flex;
+    flex-flow: column;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+.banner p{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* 푸터 */
+
+
+footer *{
+    background-color:  #111;
+}
+footer{
+    width: 100%;
+    background-color:  #111;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+.icons{
+    width: 90%;
+    height: 40vh;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+}
+.icon{
+    font-size: 1.2rem;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+#footer{
+    border-top: 1px solid gray;
+    width: 100%;
+    height: 100px;
+    background-color: #222;;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer *{
+    background-color: #222;;
+}
+#footer h2{
+    font-size: 1rem;
+    margin: 0;
+}
+#footer p{
+    font-size: .7rem;
+    margin-top: .4rem;
+}
